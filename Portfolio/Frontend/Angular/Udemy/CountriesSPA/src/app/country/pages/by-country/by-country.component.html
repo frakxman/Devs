@@ -3,7 +3,11 @@
 
 <div class="row">
   <div class="col">
-    <app-search (onEnter)="search( $event )"></app-search>
+    <app-search
+      (onEnter)="search( $event )"
+      (onDebounce)="sugest( $event )"
+    >
+    </app-search>
   </div>
 </div>
 

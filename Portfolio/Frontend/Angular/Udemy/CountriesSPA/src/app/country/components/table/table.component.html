@@ -14,7 +14,7 @@
       <td>
         <img [src]="country.flags.svg" [alt]="country.name.official" class="country-flag">
       </td>
-      <td>{{ country.name.official }}</td>
+      <td>{{ country.capital }} - {{ country.name.official }}</td>
       <td>{{ country.population | number }}</td>
       <td>
         <a [routerLink]="['/country', country.altSpellings[0]]">See more...</a>

@@ -1,1 +1,23 @@
-<p>by-capital works!</p>
+<h2>By Capital</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-search
+      (onEnter)="search( $event )"
+    >
+    </app-search>
+  </div>
+</div>
+
+<hr>
+
+<div class="alert alert-danger" *ngIf="isError">
+  We didn't find any country related to this word <strong><i>"{{ term }}"</i></strong>
+</div>
+
+<div class="row">
+  <div class="col">
+    <app-table [countries]="countries"></app-table>
+  </div>
+</div>

@@ -12,7 +12,7 @@
     <tr *ngFor="let country of countries; let i = index">
       <td>{{ i + 1 }}</td>
       <td>
-        <img [src]="country.flags.svg" [alt]="country.name.official" class="country-flag">
+        <img [src]="country.flags.svg" [alt]="country.name.official" class="img-thumbnail">
       </td>
       <td>{{ country.capital }} - {{ country.name.official }}</td>
       <td>{{ country.population | number }}</td>

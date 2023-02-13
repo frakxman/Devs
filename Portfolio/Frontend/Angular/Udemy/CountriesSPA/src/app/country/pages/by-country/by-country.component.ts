@@ -19,7 +19,7 @@ export class ByCountryComponent {
     this.isError = false;
     this.term = term;
 
-    this.countryService.getCountry( term )
+    this.countryService.getCountries( term )
       .subscribe( ( countries ) => {
         console.log( countries );
         this.countries = countries;

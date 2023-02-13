@@ -1,1 +1,33 @@
-<p>see-country works!</p>
+<div
+  *ngIf="!country; else divCountry"
+  class="alert alert-info"
+>
+  Wait please...
+</div>
+
+<ng-template #divCountry>
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ country[0].name.official }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h3>Flag</h3>
+      <img [src]="country[0].flags.svg" [alt]="country[0].name.official" class="img-thumbnail">
+    </div>
+
+    <div class="col">
+      <h3>Information</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>
+            Population
+          </strong>
+          {{ country[0].population | number }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

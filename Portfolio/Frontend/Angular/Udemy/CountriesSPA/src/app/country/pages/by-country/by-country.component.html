@@ -12,6 +12,22 @@
   </div>
 </div>
 
+<ul class="list-group" *ngIf="showSugets">
+  <li
+    *ngFor="let name of sugets"
+    class="list-group-item list-group-item-action"
+  >
+    <a class="nav-link" [routerLink]="['/country', name.altSpellings[0]]">
+      {{ name.name.official }}
+    </a>
+  </li>
+
+  <li class="list-group-item list-group-item-action" (click)="search( term )">
+    <a class="nav-link">
+      Search {{ term }}
+    </a>
+  </li>
+</ul>
 <hr>
 
 <div class="alert alert-danger" *ngIf="isError">
